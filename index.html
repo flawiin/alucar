@@ -32,8 +32,27 @@
             <p class="about__text">| Assistência 24hrs.</p>
           </div>
         </section>
-        <section>
-          <h2></h2>
+        <section class="contact">
+          <span class="contact__element"></span>
+          <h2 class="contact__title">Contato</h2>
+          <span class="contact__element"></span>
+        </section>
+        <section class="form-section">
+          <div class="form-section__header">
+            <h3 class="form-section__title">Análise de Cadastro</h3>
+            <p class="form-section__description">Preencha os campos abaixo e analisaremos seus dados.</p>
+          </div>
+          <form action="" method="POST" class="form-section__form">
+            <fieldset class="form-section__fieldset">
+              <legend class="form-section__legend">Dados pessoais</legend>
+              <label for="nome" class="form-section__label">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required class="form-section__input" />
+              <label for="data" class="form-section__label">Data de Nascimento</label>
+              <input type="date" id="data" name="data_nascimento" required class="form-section__input" />
+              <label for="phone" class="form-section__label">Telefone</label>
+              <input type="tel" placeholder="XX-XXXXX-XXXX" id="phone" name="telefone" class="form-section__input" />
+            </fieldset>
+          </form>
         </section>
       </main>
     </div>
