@@ -17,6 +17,22 @@ Site institucional estático para a locadora de veículos AluCar. O projeto util
 - Layout fluido com imagens responsivas e tipografia padrão do sistema.
 - Sem JavaScript ou bibliotecas externas — fácil de manter e publicar.
 
+## Envio Agrupado por Fieldset
+Os campos do formulário foram nomeados usando notação com colchetes para que, ao enviar, os dados cheguem agrupados por seção (fieldset):
+
+- Dados pessoais: `dados[nome]`, `dados[data_nascimento]`, `dados[telefone]`
+- CNH: `cnh[registro]`, `cnh[validade]`
+- Carro: `carro[modelo]`
+
+Exemplos de como o backend recebe:
+
+- PHP: `$_POST['cnh']['registro']`, `$_POST['dados']['nome']`.
+- Node/Express (body-parser padrão urlencoded estendido): `req.body.cnh.registro`, `req.body.dados.nome`.
+
+Observações:
+- Certifique-se de que o parser de URL-encoded do backend suporte chaves aninhadas (em Express, use `extended: true`).
+- Caso o backend prefira JSON, é possível enviar via JavaScript convertendo os grupos em um objeto e fazendo `fetch` com `Content-Type: application/json`.
+
 ## Estrutura do Projeto
 - `index.html` — página principal com a marcação das seções (hero, about, contact, form, footer).
 - `assets/css/style.css` — estilos da página (BEM-like e classes por seção).
