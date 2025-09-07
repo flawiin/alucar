@@ -16,7 +16,10 @@
       </header>
       <main class="main">
         <section class="hero">
-          <h2 class="hero__title">ALUCAR - ALUGUEL DE CARROS</h2>
+          <div class="hero__content">
+            <h2 class="hero__title">AluCar</h2>
+            <p class="hero__overview">Aluguel de Carros</p>
+          </div>
         </section>
         <section class="about">
           <div class="about__content">
@@ -52,9 +55,33 @@
               <label for="phone" class="form-section__label">Telefone</label>
               <input type="tel" placeholder="XX-XXXXX-XXXX" id="phone" name="telefone" class="form-section__input" />
             </fieldset>
+
+            <fieldset class="form-section__fieldset">
+              <legend class="form-section__legend">CNH</legend>
+              <label for="registro" class="form-section__label">Número de Registro</label>
+              <input type="number" id="registro" name="registro" class="form-section__input" placeholder="Digite o número de registro da CNH" required />
+              <label for="validade" class="form-section__label">Validade</label>
+              <input type="date" name="validade" id="validade" class="form-section__input" placeholder="dd/mm/aaaa" required />
+            </fieldset>
+
+            <fieldset class="form-section__fieldset">
+              <legend class="form-section__legend">Carro</legend>
+              <label for="carro" class="form-section__label">Modelo do Carro</label>
+              <select name="carro" id="carro" class="form-section__input" required>
+                <option value="" disabled selected>Escolha um carro</option>
+                <option value="uno">Fiat Uno</option>
+                <option value="frontier">Nissan Frontier</option>
+                <option value="gol">Volkswagen Gol</option>
+              </select>
+            </fieldset>
+
+            <button type="submit" class="form-section__submit">Enviar dados</button>
           </form>
         </section>
       </main>
+      <footer class="footer">
+        <p class="footer__text">Copyright 2022 - AluCar</p>
+      </footer>
     </div>
   </body>
 </html>
