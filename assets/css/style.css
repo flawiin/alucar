@@ -92,8 +92,9 @@ a {
 
 .about__gallery {
   display: flex;
-  gap: 0.125rem;
+  gap: .25rem;
   padding-bottom: 0.625rem;
+  flex-wrap: wrap;
 }
 
 .about__image {
